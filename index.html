@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Strategic consulting and data solutions for businesses by Pinnacle Business Consulting.">
+    <title>Pinnacle Business Consulting</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @media (max-width: 768px) {
+          #navbar {
+            display: none;
+            flex-direction: column;
+            gap: 1rem;
+          }
+      
+          #navbar.show {
+            display: flex;
+          }
+        }
+      </style>
+      
+    <script defer src="script.js"></script>
+
+    <style>
+  #contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  #contact-form label {
+    font-weight: bold;
+    color: #333;
+  }
+
+  #contact-form input,
+  #contact-form textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    width: 100%;
+    resize: vertical;
+  }
+
+  #contact-form button {
+    padding: 0.75rem 1.5rem;
+    background-color: #004aad;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  #contact-form button:hover {
+    background-color: #003688;
+  }
+</style>
+
+</head>
+<body>
+    <header>
+        <h1>Pinnacle Business Consulting</h1>
+        <nav aria-label="Main navigation">
+            <ul id="navbar">
+          
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Our Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                
+            </ul>
+            <button id="mobile-menu-toggle" aria-label="Toggle navigation menu">☰</button>
+        </nav>
+    </header>
+    <main>
+      <section id="home">
+        <img class="hero-banner" src="Images/banner.jpg" alt="Business strategy banner for Pinnacle Business Consulting">
+
+        <h2>Welcome to Pinnacle Business Consulting</h2>
+        <p>Empowering bold decisions with data and strategy</p>
+        <button onclick="scrollToSection('services')">Learn More</button>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        
+        <p>
+          At Pinnacle Business Consulting, we help businesses navigate challenges and achieve sustainable growth through strategic consulting and data insights. Our team of experts is dedicated to delivering actionable solutions that drive success.
+        </p>
+        <img src="Images/about.jpg" alt="Our Team at Pinnacle Business Consulting" class="hero-banner">
+      
+        <h3>Our Mission</h3>
+        <p>
+          Our mission is to empower businesses by providing them with data-driven insights and strategic guidance to help them reach their fullest potential.
+        </p>
+      
+       <section class="team-selection">
+        <h2>Meet Our Team</h2>
+        <div class="team-cards">
+            <div class="team-card">
+              
+              <h3>Harvey Seloko</h3>
+              <p>Founder & Chief Executive Officer</p>
+              <img src="Images/CEO.JPG" alt="CEO">
+            </div>
+            <div>
+                <div class="team-card">
+                      
+                    <h3>Jane Doe</h3>
+                    <p>Lead Consultant</p>
+                    <img src="Images/consultant.jpg" alt="Lead Consultant">
+                </div>
+            </div>
+            <div class="team-card">
+                
+                <h3>Sarah Smith</h3>
+                <p>Business Analyst</p>
+                <img src="Images/analyst.jpg" alt="Business Analyst">
+            </div>
+            <div class="team-card">
+                <h3>Anah Bill</h3>
+                <p>Marketing Strategist</p>
+                <img src="Images/marketing.jpg" alt="Marketing Analyst">
+            </div>
+            <div class="team-card">
+                <h3>Gareth Stark</h3>
+                <p>IT Specialist</p>
+                <img src="Images/IT.jpg" alt="IT Specialist">
+            </div>
+            <div class="team-card">
+                <h3>Moses Antony</h3>
+                <p>Data Analyst</p>
+                <img src="Images/dataanalyst.jpg" alt="Data Analyst">
+            </div>
+        </div>
+       </section>
+      
+        <h3>Our Values</h3>
+        <ul>
+          <li>Integrity</li>
+          <li>Excellence</li>
+          <li>Innovation</li>
+          <li>Collaboration</li>
+        </ul>
+  
+      <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+          <div class="service-card">
+            <img src="Images/businessstrategy.jpg" alt="Business Strategy Icon">
+            <h3>Business Strategy</h3>
+            <p>We help businesses create data-informed strategies that align with their long-term goals and market dynamics.</p>
+          </div>
+          <div class="service-card">
+            <img src="Images/marketresearch.jpg" alt="Market Research Icon">
+            <h3>Market Research</h3>
+            <p>Gain insights into your target audience, industry trends, and competitor landscape to stay ahead.</p>
+          </div>
+          <div class="service-card">
+            <img src="Images/dataanalytics.jpg" alt="Data Analytics Icon">
+            <h3>Data Analytics</h3>
+            <p>Transform raw data into actionable insights with our end-to-end business intelligence services.</p>
+          </div>
+          <div class="service-card">
+            <img src="Images/digitaltransformation.jpg" alt="Digital Transformation Icon">
+            <h3>Digital Transformation</h3>
+            <p>Leverage technology to innovate processes, optimize operations, and enhance customer experience.</p>
+          </div>
+          <div class="service-card">
+            <img src="Images/operations.jpg" alt="Operations Optimization Icon">
+            <h3>Operations Optimization</h3>
+            <p>Streamline internal processes, reduce waste and improve operational efficiency.</p>
+          </div>
+          <div class="service-card">
+            <img src="Images/finance.jpg" alt="Financial Planning & Forecasting Icon">
+            <h3>Financial Planning & Forecasting</h3>
+            <p>Help clients plan budgets, forecast revenue and manage cash flow using financial modeling.</p>
+          </div>
+        </div>
+      </section>
+      
+
+    <section id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <blockquote>
+            <p>"Pinnacle transformed our entire business model.The new one was professional, sharp and truly insightful."</p>
+            <footer>- Jane D., CEO of SparkTech</footer>
+        </blockquote>
+        <blockquote>
+            <p>"Their data-driven approach helped us unlock new revenue streams and improve customer satisfaction."</p>
+            <footer>- Hope S., Founder of InkBlot</footer>
+        </blockquote>
+    </section>
+
+    <section id="blog">
+        <h2>Our Blog</h2>
+        <article>
+            <h3>Top 5 Business Trends in 2025</h3>
+             <p><em>Published April 15, 2025</em></p>
+            <p>Stay ahead of the curve with our breakdown of the most impactful business trends this year...</p>
+            <a href="Blog/Blog-post-1.html" class="read-more">Read More</a>
+        </article>
+        <article>
+            <h3>Data Strategy: Why It Matters</h3>
+             <p><em>Published March 20, 2025</em></p>
+            <p>Learn how a smart data strategy can revolutionize your decision-making process...</p>
+            <a href="Blog/Blog-post-2.html" class="read-more">Read More</a>
+          </article>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+
+  <form id="contact-form">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Name:" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Email:" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" placeholder="Message:" rows="6" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+  <p id="form-response" style="text-align:center; margin-top:1rem;"></p>
+</section>
+
+        <p>Or reach out to us directly on <a href="https://wa.me/26777398783" target="_blank">WhatsApp</a></p>
+    </section>
+    </main>
+    
+
+    <footer>
+        <p>&copy; 2025 Pinnacle Business Consulting. All rights reserved.</p>
+    </footer>
+</body>
+</html>
