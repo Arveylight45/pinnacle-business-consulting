@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services - Pinnacle Business Consulting</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services-container">
+       <div class="service-card">
+            <img src="businessstrategy.jpg" alt="Business Strategy Icon">
+            <h3>Business Strategy</h3>
+            <p>We help businesses create data-informed strategies that align with their long-term goals and market dynamics.</p>
+          </div>
+          <div class="service-card">
+            <img src="marketresearch.jpg" alt="Market Research Icon">
+            <h3>Market Research</h3>
+            <p>Gain insights into your target audience, industry trends, and competitor landscape to stay ahead.</p>
+          </div>
+          <div class="service-card">
+            <img src="dataanalytics.jpg" alt="Data Analytics Icon">
+            <h3>Data Analytics</h3>
+            <p>Transform raw data into actionable insights with our end-to-end business intelligence services.</p>
+          </div>
+          <div class="service-card">
+            <img src="digitaltransformation.jpg" alt="Digital Transformation Icon">
+            <h3>Digital Transformation</h3>
+            <p>Leverage technology to innovate processes, optimize operations, and enhance customer experience.</p>
+          </div>
+          <div class="service-card">
+            <img src="operations.jpg" alt="Operations Optimization Icon">
+            <h3>Operations Optimization</h3>
+            <p>Streamline internal processes, reduce waste and improve operational efficiency.</p>
+          </div>
+          <div class="service-card">
+            <img src="finance.jpg" alt="Financial Planning & Forecasting Icon">
+            <h3>Financial Planning & Forecasting</h3>
+            <p>Help clients plan budgets, forecast revenue and manage cash flow using financial modeling.</p>
+          </div>
+    </div>
+
+    <p style="text-align:center; margin-top: 2rem;">
+      <a href="index.html" style="text-decoration: none; color: #004aad; font-weight: bold;">← Back to Home</a>
+    </p>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+        const toggleBtn = document.getElementById("mobile-menu-toggle");
+        const navbar = document.getElementById("navbar");
+        toggleBtn?.addEventListener("click", () => {
+          navbar.classList.toggle("show");
+        });
+      });
+  </script>
+
+  <script>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

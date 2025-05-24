@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Blog - Pinnacle Business Consulting</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <section id="blog">
+    <h2>Our Blog</h2>
+
+    <article>
+      <h3>Top 5 Business Trends in 2025</h3>
+      <p><em>Published April 15, 2025</em></p>
+      <p>Stay ahead of the curve with our breakdown of the most impactful business trends this year...</p>
+      <a href="Blog-post-1.html" class="read-more">Read More</a>
+    </article>
+
+    <article>
+      <h3>Data Strategy: Why It Matters</h3>
+      <p><em>Published March 20, 2025</em></p>
+      <p>Learn how a smart data strategy can revolutionize your decision-making process...</p>
+      <a href="Blog-post-2.html" class="read-more">Read More</a>
+    </article>
+
+    <p style="text-align:center; margin-top: 2rem;">
+      <a href="index.html" style="text-decoration: none; color: #004aad; font-weight: bold;">← Back to Home</a>
+    </p>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+        const toggleBtn = document.getElementById("mobile-menu-toggle");
+        const navbar = document.getElementById("navbar");
+        toggleBtn?.addEventListener("click", () => {
+          navbar.classList.toggle("show");
+        });
+      });
+  </script>
+
+  <script>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

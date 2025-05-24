@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Pinnacle Business Consulting</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    form {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+    button[type="submit"] {
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #004aad;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button[type="submit"]:hover {
+      background-color: #003688;
+    }
+  </style>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contact-form" action="#" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p style="text-align:center;">Or reach out to us on <a href="https://wa.me/26777398783" target="_blank">WhatsApp</a></p>
+
+    <p style="text-align:center; margin-top: 2rem;">
+      <a href="index.html" style="text-decoration: none; color: #004aad; font-weight: bold;">← Back to Home</a>
+    </p>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+        const toggleBtn = document.getElementById("mobile-menu-toggle");
+        const navbar = document.getElementById("navbar");
+        toggleBtn?.addEventListener("click", () => {
+          navbar.classList.toggle("show");
+        });
+      });
+  </script>
+
+  <script>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

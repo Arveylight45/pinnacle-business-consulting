@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testimonials - Pinnacle Business Consulting</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <section id="testimonials">
+    <h2>What Our Clients Say</h2>
+
+    <blockquote>
+      <p>“Pinnacle transformed our entire business model. The new one was professional, sharp and truly insightful.”</p>
+      <footer>- Jane D., CEO of SparkTech</footer>
+    </blockquote>
+
+    <blockquote>
+      <p>“Their data-driven approach helped us unlock new revenue streams and improve customer satisfaction.”</p>
+      <footer>- Hope S., Founder of InkBlot</footer>
+    </blockquote>
+
+    <blockquote>
+      <p>“Highly professional, timely delivery, and unmatched insight. We now operate more efficiently than ever.”</p>
+      <footer>- Daniel K., Operations Manager at BrightWave</footer>
+    </blockquote>
+
+    <p style="text-align:center; margin-top: 2rem;">
+      <a href="index.html" style="text-decoration: none; color: #004aad; font-weight: bold;">← Back to Home</a>
+    </p>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+        const toggleBtn = document.getElementById("mobile-menu-toggle");
+        const navbar = document.getElementById("navbar");
+        toggleBtn?.addEventListener("click", () => {
+          navbar.classList.toggle("show");
+        });
+      });
+  </script>
+
+  <script>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

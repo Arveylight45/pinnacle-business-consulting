@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Pinnacle Business Consulting</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>At Pinnacle Business Consulting, we help businesses navigate challenges and achieve sustainable growth through strategic consulting and data insights.</p>
+
+    <h3>Our Mission</h3>
+    <p>Empower businesses by providing data-driven insights and strategic guidance to help them reach their full potential.</p>
+
+    <h3>Meet Our Team</h3>
+    <div class="team-cards">
+     <div class="team-card">
+              
+              <h3>Harvey Seloko</h3>
+              <p>Founder & Chief Executive Officer</p>
+              <img src="CEO.JPG" alt="CEO">
+            </div>
+            <div>
+                <div class="team-card">
+                      
+                    <h3>Jane Doe</h3>
+                    <p>Lead Consultant</p>
+                    <img src="consultant.jpg" alt="Lead Consultant">
+                </div>
+            </div>
+            <div class="team-card">
+                
+                <h3>Sarah Smith</h3>
+                <p>Business Analyst</p>
+                <img src="analyst.jpg" alt="Business Analyst">
+            </div>
+            <div class="team-card">
+                <h3>Anah Bill</h3>
+                <p>Marketing Strategist</p>
+                <img src="marketing.jpg" alt="Marketing Analyst">
+            </div>
+            <div class="team-card">
+                <h3>Gareth Stark</h3>
+                <p>IT Specialist</p>
+                <img src="IT.jpg" alt="IT Specialist">
+            </div>
+            <div class="team-card">
+                <h3>Moses Antony</h3>
+                <p>Data Analyst</p>
+                <img src="dataanalyst.jpg" alt="Data Analyst">
+            </div>
+    </div>
+
+    <h3>Our Values</h3>
+    <ul>
+      <li>Integrity</li>
+      <li>Excellence</li>
+      <li>Innovation</li>
+      <li>Collaboration</li>
+    </ul>
+
+    <p style="text-align:center; margin-top: 2rem;">
+      <a href="index.html" style="text-decoration: none; color: #004aad; font-weight: bold;">← Back to Home</a>
+    </p>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+        const toggleBtn = document.getElementById("mobile-menu-toggle");
+        const navbar = document.getElementById("navbar");
+        toggleBtn?.addEventListener("click", () => {
+          navbar.classList.toggle("show");
+        });
+      });
+  </script>
+
+  <script>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
