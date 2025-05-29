@@ -361,16 +361,4 @@ body {
     }
   }
   
-  <style>
-  @media (max-width: 768px) {
-    #navbar {
-      display: none;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    #navbar.show {
-      display: flex;
-    }
-  }
-</style>
+ 
